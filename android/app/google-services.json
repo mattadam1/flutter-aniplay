@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1033846487212",
+    "project_id": "my-cool-movie-app",
+    "storage_bucket": "my-cool-movie-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033846487212:android:77d3adc4592d8d02974709",
+        "android_client_info": {
+          "package_name": "com.example.groupassignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjnWHHycUfoV1-Tcx6L45xGmzzjYmJzT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033846487212:android:f48c775a3625abad974709",
+        "android_client_info": {
+          "package_name": "com.example.movie_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjnWHHycUfoV1-Tcx6L45xGmzzjYmJzT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
