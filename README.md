@@ -102,7 +102,6 @@ Below are snapshots of the app's flow, demonstrating its functionality and user 
 
 ![Movie Details Page](assets/movie%20detail.png)
 
-**Note**: Replace `add-your-screenshot-link-here` with actual links to your app screenshots.
 
 ## Additional Notes
 - **Use of Widgets**: The app demonstrates the use of various Flutter widgets such as `GridView`, `TextFormField`, `ElevatedButton`, and `Hero`.
