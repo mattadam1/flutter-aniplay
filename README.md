@@ -1,5 +1,17 @@
 # Movie App
 
+## Team Members
+Below are the names and matric IDs of the team members who contributed to this project:
+
+| Name                                     | Matric ID   |
+|------------------------------------------|-------------|
+| [MUHAMMAD ADAM IDURRAHMAN BIN MOHD SOPI] | [2218035]   |
+| [ MUHAMMAD HANIF SYAHMI BIN MOHD FITRI ] | [2223305D] |
+
+
+
+
+
 ## Table of Contents
 - [Summary and Objective](#summary-and-objective)
 - [Project Details](#project-details)
@@ -38,8 +50,6 @@ The Movie App is a multi-page Flutter application that leverages the power of AP
 - **Flutter**: The app is built using Flutter, a cross-platform framework for developing mobile applications.
 - **Firebase Authentication**: Used for user authentication (login and signup).
 - **HTTP Library**: The `http` package is used to fetch movie data and images from an external API.
-- **CachedNetworkImage**: Efficiently loads and caches images from URLs.
-- **Hero Animation**: Provides smooth transitions between pages.
 - **Flutter Widgets**: The app makes extensive use of widgets such as `GridView`, `TextFormField`, `ElevatedButton`, etc.
 - **Gradient Backgrounds and Styling**: Modern UI elements like gradients, rounded corners, and shadows enhance the visual appeal.
 
@@ -63,16 +73,6 @@ flutter run
 2. Download the `google-services.json` file and place it in the `android/app` directory.
 3. Update the Firebase configuration in the `lib` folder if necessary.
 
-## Team Members
-Below are the names and matric IDs of the team members who contributed to this project:
-
-| Name               | Matric ID       |
-|--------------------|----------------|
-| [Your Name]       | [Your Matric ID]|
-| [Team Member 2]   | [Matric ID]     |
-| [Team Member 3]   | [Matric ID]     |
-
-**Note**: Ensure all team members' names and matric IDs are added here. If your name is not present, you will not be graded.
 
 ## App Flow Screenshots
 Below are snapshots of the app's flow, demonstrating its functionality and user interface:
@@ -80,27 +80,27 @@ Below are snapshots of the app's flow, demonstrating its functionality and user 
 ### 1. Login Page
 **Description**: The login page allows users to authenticate themselves using their email and password.
 
-![Login Page](add-your-screenshot-link-here)
+![Login Page](assets/login.png)
 
 ### 2. Signup Page
 **Description**: New users can create an account by providing their email and password.
 
-![Signup Page](add-your-screenshot-link-here)
+![Signup Page](assets/signup.png)
 
 ### 3. Home Page
 **Description**: The home page displays a grid of popular movies fetched from the API.
 
-![Home Page](add-your-screenshot-link-here)
+![Home Page](assets/homepage.png)
 
 ### 4. Search Functionality
 **Description**: Users can search for specific movies using the search bar.
 
-![Search Page](https://imgur.com/a/e5hm90s)
+![Search Page](assets/search.png)
 
 ### 5. Movie Details Page
 **Description**: Clicking on a movie poster opens a detailed view of the movie.
 
-![Movie Details Page](add-your-screenshot-link-here)
+![Movie Details Page](assets/movie%20detail.png)
 
 **Note**: Replace `add-your-screenshot-link-here` with actual links to your app screenshots.
 
