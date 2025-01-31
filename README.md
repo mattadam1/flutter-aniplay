@@ -3,10 +3,10 @@
 ## Team Members
 Below are the names and matric IDs of the team members who contributed to this project:
 
-| Name                                     | Matric ID   |
-|------------------------------------------|-------------|
-| [MUHAMMAD ADAM IDURRAHMAN BIN MOHD SOPI] | [2218035]   |
-| [ MUHAMMAD HANIF SYAHMI BIN MOHD FITRI ] | [2223305D] |
+| Name                                     | Matric ID  |
+|------------------------------------------|------------|
+| [MUHAMMAD ADAM IDURRAHMAN BIN MOHD SOPI] | [2218035]  |
+| [ MUHAMMAD HANIF SYAHMI BIN MOHD FITRI ] | [2223305] |
 
 
 
