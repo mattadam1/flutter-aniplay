@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.deepPurple,
         title: const Text(
           'Aniplay',
           style: TextStyle(
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           IconButton(
-            icon: Icon(_showSearch ? Icons.close : Icons.search, color: Colors.white), // Change icon
+            icon: Icon(_showSearch ? Icons.close : Icons.search, color: Colors.white),
             onPressed: () {
               setState(() {
                 _showSearch = !_showSearch;
@@ -79,6 +79,18 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Stack(
         children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.deepPurple.shade300,
+                  Colors.deepPurple.shade800,
+                ],
+              ),
+            ),
+          ),
           FutureBuilder<List<Movie>>(
             future: _moviesFuture,
             builder: (context, snapshot) {
@@ -95,25 +107,30 @@ class _HomePageState extends State<HomePage> {
                   itemCount: movies.length,
                   itemBuilder: (context, index) {
                     final movie = movies[index];
-                    final posterUrl =
-                        'https://image.tmdb.org/t/p/w500${movie.posterpath}';
+                    final posterUrl = 'https://image.tmdb.org/t/p/w500${movie.posterpath}';
                     return GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/movieDetails',
-                            arguments: movie);
+                        Navigator.pushNamed(context, '/movieDetails', arguments: movie);
                       },
                       child: Column(
                         children: [
                           Expanded(
                             child: Hero(
                               tag: movie.id,
-                              child: CachedNetworkImage(
-                                imageUrl: posterUrl,
-                                fit: BoxFit.cover,
-                                placeholder: (context, url) =>
+                              child: Material(
+                                elevation: 5,
+                                borderRadius: BorderRadius.circular(10),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: CachedNetworkImage(
+                                    imageUrl: posterUrl,
+                                    fit: BoxFit.cover,
+                                    placeholder: (context, url) =>
                                     const Center(child: CircularProgressIndicator()),
-                                errorWidget: (context, url, error) =>
-                                    const Icon(Icons.error),
+                                    errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error, size: 60, color: Colors.white),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -123,7 +140,8 @@ class _HomePageState extends State<HomePage> {
                               movie.title,
                               textAlign: TextAlign.center,
                               overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(fontSize: 12),
+                              maxLines: 2,
+                              style: const TextStyle(fontSize: 14, color: Colors.white),
                             ),
                           ),
                         ],
@@ -132,9 +150,18 @@ class _HomePageState extends State<HomePage> {
                   },
                 );
               } else if (snapshot.hasError) {
-                return const Center(child: Text('Failed to load movies'));
+                return const Center(
+                  child: Text(
+                    'Failed to load movies',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                );
               } else {
-                return const Center(child: CircularProgressIndicator());
+                return const Center(
+                  child: CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                  ),
+                );
               }
             },
           ),
@@ -145,7 +172,16 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Container(
                   padding: const EdgeInsets.all(8.0),
-                  color: Colors.grey[800],
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.deepPurple.shade800.withOpacity(0.9),
+                        Colors.black.withOpacity(0.9),
+                      ],
+                    ),
+                  ),
                   child: const Text(
                     "Made with ❤️ by Aniplay",
                     textAlign: TextAlign.center,
@@ -180,22 +216,25 @@ class _HomePageState extends State<HomePage> {
       preferredSize: const Size.fromHeight(kToolbarHeight),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        color: Colors.grey[800],
+        decoration: BoxDecoration(
+          color: Colors.deepPurple.shade800,
+          borderRadius: const BorderRadius.vertical(bottom: Radius.circular(10)),
+        ),
         child: TextField(
           onChanged: _handleSearch,
-          autofocus: true, // Autofocus for better UX
+          autofocus: true,
           decoration: InputDecoration(
             hintText: 'Search movies...',
             hintStyle: const TextStyle(color: Colors.white),
             border: InputBorder.none,
             icon: const Icon(Icons.search, color: Colors.white),
-            suffixIcon: _searchText.isNotEmpty // Add clear icon conditionally
+            suffixIcon: _searchText.isNotEmpty
                 ? IconButton(
-                    icon: const Icon(Icons.clear, color: Colors.white),
-                    onPressed: () {
-                      _handleSearch(''); // Clear search
-                    },
-                  )
+              icon: const Icon(Icons.clear, color: Colors.white),
+              onPressed: () {
+                _handleSearch('');
+              },
+            )
                 : null,
           ),
           style: const TextStyle(color: Colors.white),
