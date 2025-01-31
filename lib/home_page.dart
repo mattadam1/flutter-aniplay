@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   child: const Text(
-                    "Made with ❤️ by Aniplay",
+                    "Almost die making this app 💀",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.black,
                   padding: const EdgeInsets.all(4.0),
                   child: const Text(
-                    "© 2025 Aniplay. All Rights Reserved. | Made by hnfsyhmi",
+                    "© 2025 by who knows. All Rights Reserved. | Made by hnfsyhmi and mattadam",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
